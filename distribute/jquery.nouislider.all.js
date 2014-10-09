@@ -1141,7 +1141,7 @@ var
 
 		parsed.limit = parsed.spectrum.getMargin(entry);
 
-		if ( !parsed.limit ) {
+		if ( parsed.limit < 0 ) {
 			throw new Error("noUiSlider: 'limit' option is only supported on linear sliders.");
 		}
 	}
